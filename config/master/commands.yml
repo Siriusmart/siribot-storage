@@ -1,0 +1,8 @@
+ping:
+  enable: true
+  cooldown: 1000 # In milliseconds
+  buttons:
+    pingAgain: 
+      enable: true
+      show-button-if-disabled: false
+      cooldown: 1000

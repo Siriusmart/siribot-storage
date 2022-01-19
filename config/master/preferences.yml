@@ -1,0 +1,7 @@
+onStart:
+  sendMessages:
+    enable: false
+    users:
+      - '623823202073706496' # This user will recieve a DM when bot starts
+    channels:
+      - '862364511889915904' # A message will be sent to this channel when bot starts

@@ -1,0 +1,10 @@
+{
+    "cooldowns": {
+        "ping": {
+            "commandExecute": 0,
+            "buttons": {
+                "pingAgain": 0
+            }
+        }
+    }
+}

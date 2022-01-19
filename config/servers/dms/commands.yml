@@ -1,0 +1,5 @@
+ping:
+  enable: true
+  cooldown: 0 # In milliseconds
+  buttons:
+    pingAgain: 0

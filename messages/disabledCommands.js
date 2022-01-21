@@ -1,6 +1,6 @@
 // message to send when user uses a disabled command or button
 
-const {MessageEmbed} = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 const button = new MessageEmbed()
     .setTitle('❌Button Disabled')
@@ -20,13 +20,13 @@ const missing_perms = new MessageEmbed()
     .setColor('#990000');
 
 
-function message (info){
+function message(info) {
     // info = {type (button, command-dm, command, missing-perms)}
 
-    switch(into.type){
+    switch (info.type) {
         case 'button':
             return button.setTimestamp();
-        
+
         case 'command-dm':
             return command_dm.setTimestamp();
 

@@ -1,10 +1,11 @@
 {
     "cooldowns": {
         "ping": {
-            "commandExecute": 0,
+            "commandExecute": 1642772929091,
             "buttons": {
                 "pingAgain": 0
             }
         }
-    }
+    },
+    "profileCreate": 1642617102395
 }

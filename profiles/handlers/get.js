@@ -2,6 +2,7 @@ const fs = require('fs');
 
 const defaultProfile = {
     cooldowns: {},
+
 };
 
 function get(userID, create, storagePath) {

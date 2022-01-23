@@ -1,11 +1,12 @@
 config-version: 1
 
 ping:
-  enable: true
+  enabled: true
   allow-dm: true
-  cooldown: 2000 # In milliseconds
+  cooldown: 1000 # In milliseconds
   buttons:
     pingAgain:
-      enable: true
+      enabled: false
+      allow-dm: true
       show-button-if-disabled: false
       cooldown: 3000

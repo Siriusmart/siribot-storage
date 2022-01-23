@@ -4,7 +4,7 @@ const { MessageEmbed } = require('discord.js');
 
 const button = new MessageEmbed()
     .setTitle('❌Button Disabled')
-    .setDescription('The button you just clicked has been disabled by bot operator')
+    .setDescription('The button you just clicked has been disabled here by bot operator')
     .setColor('#990000');
 const command_dm = new MessageEmbed()
     .setTitle('❌Command Disabled in DMs')
@@ -12,7 +12,7 @@ const command_dm = new MessageEmbed()
     .setColor('#990000');
 const command = new MessageEmbed()
     .setTitle('❌Command Disabled')
-    .setDescription('The command you just used has been disabled by bot operator')
+    .setDescription('The command you just used has been disabled here by bot operator')
     .setColor('#990000');
 const missing_perms = new MessageEmbed()
     .setTitle('❌Missing Permissions')

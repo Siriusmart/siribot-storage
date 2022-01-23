@@ -22,6 +22,7 @@ const success = new MessageEmbed()
     .setColor('#99ee99');
 
 module.exports = {
+    isCommand: true,
     data: new SlashCommandBuilder()
         .setName('su')
         .setDescription('Enable/Disable superuser mode')
@@ -38,7 +39,7 @@ module.exports = {
                 .addChoice('Global', 'global')
                 .setRequired(true)),
 
-    execute(inter, { storagePath, superusers, logger, catchFilter }, { updateSu }) {
+    execute(inter, { storagePath, superusers, logger }, { updateSu }) {
 
         if (inter.options.getString('type') === 'guild') {
             if (inter.guild !== null) {
@@ -47,10 +48,7 @@ module.exports = {
                     let noPermsCopy = noPerms;
                     noPermsCopy.setTimestamp();
                     inter.reply({ ephemeral: true, embeds: [noPermsCopy] }).then(() => { }).catch((err) => {
-                        const stack = err.stack;
-                        if (catchFilter(stack)) {
-                            console.log(logger.log(stack, ['Error', 'Command/Reply']));
-                        }
+                        console.log(logger.log(err.stack, ['Error', 'Command/Reply']));
                     });
 
                 } else {
@@ -102,10 +100,7 @@ module.exports = {
                     let noChangeCopy = noChange;
                     noChangeCopy.setTimestamp().setDescription(`Nothing changed, you are already ${setTo ? '' : 'not '}a superuser globally`);
                     inter.reply({ ephemeral: true, embeds: [noChangeCopy] }).then(() => { }).catch((err) => {
-                        const stack = err.stack;
-                        if (catchFilter(stack)) {
-                            console.log(logger.log(stack, ['Error', 'Command/Reply']));
-                        }
+                        console.log(logger.log(err.stack, ['Error', 'Command/Reply']));
                     });
                 } else {
                     if (setTo) {
@@ -117,10 +112,7 @@ module.exports = {
                     updateSu(superusers);
                     let successCopy = success; successCopy.setTimestamp().setDescription(`You have ${setTo ? 'enabled' : 'disabled'} superuser mode globally`)
                     inter.reply({ ephemeral: true, embeds: [successCopy] }).then(() => { }).catch((err) => {
-                        const stack = err.stack;
-                        if (catchFilter(stack)) {
-                            console.log(logger.log(stack, ['Error', 'Command/Reply']));
-                        }
+                        console.log(logger.log(err.stack, ['Error', 'Command/Reply']));
                     });
                 }
 

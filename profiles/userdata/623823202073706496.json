@@ -1,11 +1,11 @@
 {
     "cooldowns": {
         "ping": {
-            "commandExecute": 1642954400622,
+            "commandExecute": 1643313571610,
             "subcommands": {},
             "buttons": {
                 "pingAgain": {
-                    "buttonExecute": 1642954728113
+                    "buttonExecute": 1643313573184
                 }
             },
             "selectmenus": {}
@@ -14,7 +14,7 @@
             "commandExecute": 1642853350906,
             "subcommands": {
                 "video": {
-                    "subcommandExecute": 1642937493481
+                    "subcommandExecute": 1643308381316
                 }
             },
             "buttons": {},
@@ -29,6 +29,22 @@
                     "selectmenuExecute": 1642955028517
                 }
             }
+        },
+        "su": {
+            "commandExecute": 1643313582125,
+            "subcommands": {},
+            "buttons": {},
+            "selectmenus": {}
+        },
+        "sync-settings": {
+            "commandExecute": 0,
+            "subcommands": {
+                "configs": {
+                    "subcommandExecute": 1643310464931
+                }
+            },
+            "buttons": {},
+            "selectmenus": {}
         }
     },
     "profileCreate": 1642800016011

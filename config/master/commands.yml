@@ -5,18 +5,24 @@ ping:
   allow-dm: true
   cooldown: 1000 # In milliseconds
   buttons:
-    pingAgain: 
+    pingAgain:
       enabled: true
       allow-dm: true
       show-button-if-disabled: false
       cooldown: 2000
 
-youtube:
+su:
   enabled: true
   allow-dm: true
-  cooldown: 2000
+  cooldown: 0
+
+sync-settings:
+  enabled: true
+  allow-dm: true
+  cooldown: 0
   subcommands:
-    video:
+    configs:
       enabled: true
       allow-dm: true
-      cooldown: 3000
+      cooldown: 0
+      su-only: true

@@ -59,9 +59,9 @@ module.exports = {
                         noChangeCopy.setTimestamp().setDescription(`Nothing changed, you are already ${setTo ? '' : 'not '}a superuser in ${inter.guild.name}`);
                         inter.reply({ ephemeral: true, embeds: [noChangeCopy] }).then(() => { }).catch((err) => {
                             const stack = err.stack;
-                            if (catchFilter(stack)) {
-                                console.log(logger.log(stack, ['Error', 'Command/Reply']));
-                            }
+
+                            console.log(logger.log(stack, ['Error', 'Command/Reply']));
+
                         });
                     } else {
                         if (setTo) {
@@ -74,9 +74,9 @@ module.exports = {
                         let successCopy = success; successCopy.setTimestamp().setDescription(`You have ${setTo ? 'enabled' : 'disabled'} superuser mode in ${inter.guild.name}`)
                         inter.reply({ ephemeral: true, embeds: [successCopy] }).then(() => { }).catch((err) => {
                             const stack = err.stack;
-                            if (catchFilter(stack)) {
-                                console.log(logger.log(stack, ['Error', 'Command/Reply']));
-                            }
+
+                            console.log(logger.log(stack, ['Error', 'Command/Reply']));
+
                         });
                     }
                 }
@@ -86,9 +86,9 @@ module.exports = {
                 guildDmCopy.setTimestamp();
                 inter.reply({ ephemeral: true, embeds: [guildDmCopy] }).then(() => { }).catch((err) => {
                     const stack = err.stack;
-                    if (catchFilter(stack)) {
-                        console.log(logger.log(stack, ['Error', 'Command/Reply']));
-                    }
+
+                    console.log(logger.log(stack, ['Error', 'Command/Reply']));
+
                 });
             }
         } else {
@@ -119,9 +119,9 @@ module.exports = {
             } else {
                 inter.reply({ ephemeral: true, embeds: [noPerms.setTimestamp()] }).then(() => { }).catch((err) => {
                     const stack = err.stack;
-                    if (catchFilter(stack)) {
-                        console.log(logger.log(stack, ['Error', 'Command/Reply']));
-                    }
+
+                    console.log(logger.log(stack, ['Error', 'Command/Reply']));
+
                 });
 
             }

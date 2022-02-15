@@ -1,0 +1,15 @@
+{
+    "cooldowns": {
+        "youtube": {
+            "commandExecute": 0,
+            "subcommands": {
+                "video": {
+                    "subcommandExecute": 1642965898285
+                }
+            },
+            "buttons": {},
+            "selectmenus": {}
+        }
+    },
+    "profileCreate": 1642965886987
+}

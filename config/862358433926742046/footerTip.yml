@@ -1,8 +1,0 @@
-display-group: 'normal' # You can create your own footer tip group (another set of footer tip)
-display-chance: 0.1 # the chance of a tip being displayed
-
-normal:
-  - 'I use Arch btw'
-  - 'Did you know that BetterDiscord is a Discord plugins loader?'
-  - 'Mum get the spybrick ready'
-  - 'YMAL is way better than JSON in my opinion'

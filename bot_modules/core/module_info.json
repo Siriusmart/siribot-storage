@@ -1,0 +1,12 @@
+{
+    "name": "core",
+    "description": "the core commands for SiriBot",
+    "version": "1.0.0",
+    "authors": [
+        "siriusmart"
+    ],
+    "tags": [
+        "core"
+    ],
+    "readme": "README.md"
+}

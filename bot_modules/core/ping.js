@@ -54,7 +54,7 @@ module.exports = {
 
     buttons: {
         pingAgain(inter, { logger }) {
-            inter.update(getMessage(inter)).catch((err) => {
+            inter.update(getMessage(inter)).then(() => { }).catch((err) => {
                 console.log(logger.log(err.stack, ['Error', 'Command/Reply']));
             });
         }

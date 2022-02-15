@@ -5,18 +5,60 @@ ping:
   allow-dm: true
   cooldown: 1000 # In milliseconds
   buttons:
-    pingAgain: 
+    pingAgain:
       enabled: true
       allow-dm: true
       show-button-if-disabled: false
       cooldown: 2000
 
-youtube:
+su:
   enabled: true
   allow-dm: true
-  cooldown: 2000
+  cooldown: 0
+
+sync-settings:
+  enabled: true
+  subcommands:
+    configs:
+      enabled: true
+      allow-dm: true
+      cooldown: 0
+      su-only: true
+
+youtube:
+  enabled: true
   subcommands:
     video:
       enabled: true
       allow-dm: true
-      cooldown: 3000
+      cooldown: 10000
+
+hypixel:
+  enabled: true
+  subcommands:
+    player:
+      enabled: true
+      allow-dm: true
+      cooldown: 5000
+  selectmenus:
+    get:
+      enabled: true
+      allow-dm: true
+      cooldown: 5000
+  buttons:
+    refresh:
+      enable: true
+      allow-dm: true
+      cooldown: 5000
+
+mc-srv:
+  enabled: true
+  subcommands:
+    java:
+      enabled: true
+      allow-dm: true
+      cooldown: 1000
+    bedrock:
+      enabled: true
+      allow-dm: true
+      cooldown: 1000

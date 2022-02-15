@@ -1,9 +1,9 @@
 const get = require('./get');
 const fs = require('fs');
 
-function getCooldown(userID, { commandName, buttonName, subcommandName, selectmenuName, type, run, storagePath, botPath, guildID }) {
+function getCooldown(userID, { commandName, buttonName, subcommandName, selectmenuName, type, run, storagePath, botPath, guildID, configs }) {
 
-    let configs, cooldown, serverCooldown, logger;
+    let cooldown, serverCooldown, logger;
     try {
         let profile = get(userID, true, storagePath);
         let updateFile = false;
@@ -11,10 +11,6 @@ function getCooldown(userID, { commandName, buttonName, subcommandName, selectme
 
         if (logger === undefined) {
             logger = require(`../../${botPath}/functions/utilities/logger`);
-        }
-
-        if (configs === undefined) {
-            configs = require(`../../${botPath}/functions/utilities/getConfigs`);
         }
 
         switch (type) {
@@ -79,7 +75,7 @@ function getCooldown(userID, { commandName, buttonName, subcommandName, selectme
                         return { cooldown: -1 };
                     }
                 }
-                
+
 
                 if (configs[guildID] === undefined || configs[guildID].commands[commandName] === undefined || configs[guildID].commands[commandName].subcommands === undefined || configs[guildID].commands[commandName].subcommands[subcommandName] === undefined || configs[guildID].commands[commandName].subcommands[subcommandName].cooldown === undefined) {
                     guildID = 'master';
@@ -146,7 +142,7 @@ function getCooldown(userID, { commandName, buttonName, subcommandName, selectme
                 }
 
                 return { cooldown, serverCooldown };
-            
+
             case 'selectmenu':
                 if (profile.cooldowns[commandName] === undefined) {
                     if (run) {
